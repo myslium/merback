@@ -15,7 +15,7 @@ endpoint.get("/chamada", async (req, resp) => {
 endpoint.get("/chamada/:titulo", async (req, resp) => {
     try {
         const titulo = req.params.titulo;
-        await chamandoChamadaPorNome(titulo)
+        const chamada = await chamandoChamadaPorNome(titulo)
           resp.status(200).send(chamada)
            
     } catch (err) {
