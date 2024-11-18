@@ -41,7 +41,7 @@ endpoint.put("/chamada/:id", async (req, resp) => {
         const alteracao = req.body;
 
         await alterarChamada(alteracao, id)
-             resp.status(404).send({ erro: "Chamada não encontrada para atualização" })
+             resp.status(200).send({ mensagem: "Chamada deletada com sucesso" })
             
         
     } catch (err) {
